@@ -1,0 +1,98 @@
+name: rstream
+description: A modern IPTV streaming application with watch party features.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.5
+  # State Management
+  provider: ^6.0.5
+  
+  # Database
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  
+  # Network & API
+  dio: ^5.3.2
+  web_socket_channel: ^2.4.0
+  
+  # Authentication & Security
+  flutter_secure_storage: ^8.0.0
+  crypto: ^3.0.3
+  
+  # UI Components
+  cached_network_image: ^3.2.3
+  shimmer: ^3.0.0
+  flutter_staggered_grid_view: ^0.7.0
+  
+  # Video Player
+  video_player: ^2.7.1
+  chewie: ^1.7.1
+  
+  # Location Services
+  geolocator: ^10.0.1
+  
+  # Utils
+  intl: ^0.18.1
+  uuid: ^3.0.7
+  logger: ^2.0.1
+  shared_preferences: ^2.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.3
+  build_runner: ^2.4.6
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
+    
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+    
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+
+  # App theme configuration
+  theme:
+    primaryColor: '#E50914'
+    accentColor: '#000000'
+    backgroundColor: '#141414'
+    textColor: '#FFFFFF'
+    errorColor: '#FF3B30'
+    successColor: '#34C759'
+    warningColor: '#FF9500'
+    
+  # App configuration
+  config:
+    appName: 'RStream'
+    supportEmail: 'support@rstream.com'
+    privacyPolicyUrl: 'https://rstream.com/privacy'
+    termsOfServiceUrl: 'https://rstream.com/terms'
+    maxWatchPartySize: 10
+    maxDevicesPerUser: 4
+    defaultStreamQuality: 'HD'
